@@ -29,4 +29,4 @@ jobs:
     - name: Installing surge
       run: npm install --global surge
     - name: Deploy to Surge
-      run: surge ./dist https://boring-purpose.surge.sh/ --token 7d70d506e76abe9cbc4e5fbef39f5402
+      run: surge ./dist ${{vars.SURGE_URL}} --token ${{secrest.SURGE_TOKEN}}
